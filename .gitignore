@@ -1,0 +1,15 @@
+_sass/main-raw.scss
+_site
+.bundle
+.DS_Store
+.jekyll-metadata
+.sass-cache
+*.gem
+assets/js/app.js
+assets/js/scripts.*
+Gemfile.lock
+gulpfile.js
+node_modules
+package-lock.json
+package.json
+.idea

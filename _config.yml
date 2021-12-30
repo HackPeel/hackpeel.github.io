@@ -1,0 +1,55 @@
+---
+repository: HackPeel/peelhacks.github.io
+include: ["index.html", "_events",]
+
+# Homepage settings
+splash_title: 'hack::peel'
+splash_subtitle: 'A Peel-wide hackathon for students to compete, collaborate and learn'
+homepage_banner_image: photos/home_banner.jpg
+display_ad: true
+
+
+
+footer-description: "We are extremely cool people doing extremely cool things"
+
+
+# Links for the navbar
+navs:
+  -
+    name: Home
+    link: "/#top"
+  -
+    name: Events
+    link: "/#future-events"
+  -
+    name: Sponsor us
+    link: "/assets/pdf/sponsordeck.pdf"
+
+
+# Social media links included on the splash page
+# socials:
+#   -
+#     icon: "facebook-white.svg"
+#     name: Facebook
+#     url: "https://facebook.com/royalhackaway"
+#   -
+#     icon: "twitter.svg"
+#     name: Twitter
+#     url: "https://twitter.com/royalhackaway"
+#   -
+#     icon: "github-mark.png"
+#     name: GitHub
+#     url: "https://github.com/royalhackaway"
+
+email: fakeemail@gmail.com
+
+
+collections:
+  events:
+    output: true
+    permalink: /:slug
+
+
+sass:
+  style: compressed
+  sass_dir: _sass
