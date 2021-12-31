@@ -45,24 +45,24 @@
                     
                         
                         <li>
-                            <a href="/#top" class="nav-link text-white" data-anchor-offset="0">Home</a>
+                            <a href="http://localhost:4000/#top" class="nav-link text-white" data-anchor-offset="0">Home</a>
                         </li>
-
-
+                    
+                        
                         <li>
-                            <a href="/#future-events" class="nav-link text-white" data-anchor-offset="0">Events</a>
+                            <a href="http://localhost:4000/#future-events" class="nav-link text-white" data-anchor-offset="0">Events</a>
                         </li>
-
-
+                    
+                        
                         <li>
-                            <a href="/#sponsors" class="nav-link text-white" data-anchor-offset="0">Sponsors</a>
+                            <a href="http://localhost:4000/#sponsors" class="nav-link text-white" data-anchor-offset="0">Sponsors</a>
                         </li>
-
-
+                    
+                        
                         <li>
-                            <a href="/assets/pdf/sponsordeck.pdf" class="nav-link text-white" data-anchor-offset="0">Sponsor us</a>
+                            <a href="http://localhost:4000/assets/pdf/sponsordeck.pdf" class="nav-link text-white" data-anchor-offset="0">Sponsor us</a>
                         </li>
-
+                    
                 </ul>
             </div>
         </div>
@@ -76,7 +76,7 @@
         <h1 class="display-1 text-light">hack::peel</h1>
         <h2 class=" text-light">A Peel-wide hackathon for students to compete, collaborate and learn</h2>
         <div id="socials" class="row justify-content-center">
-
+            
         </div>
         <a class="btn btn-primary btn-lg text-light" href="#future-events">Get Involved</a>
     </div>
@@ -106,23 +106,24 @@
     </div>
 </section>
 
-<section id="hackaway-ad">
 
+<section id="hackaway-ad">
+    
         <div class="container text-center">
             <h2><b>Start hacking today</b></h2>
             <p>Sign up for hack::peel on DevPost</p>
             <a class="btn btn-outline-light" href="https://devpost.com/">Sign Up</a>
         </div>
-
+    
 </section>
 
 <section id="future-events" class="light-bg">
     <div class="container border">
         <h2 class="text-center">Upcoming events</h2>
         <div class="row justify-content-center">
-
-
-
+            
+            
+                
                     <div class="card col-sm-6 col-md-3" style="border-width: 1px; border-color: #F48B22;">
                         <a href="example-event-1"></a>
                         <div class="card-body">
@@ -131,9 +132,9 @@
                             <p class="card-text align-bottom">sus</p>
                         </div>
                     </div>
-
-
-
+                
+            
+                
                     <div class="card col-sm-6 col-md-3" style="border-width: 1px; border-color: #800080;">
                         <a href="example-event-2"></a>
                         <div class="card-body">
@@ -142,9 +143,9 @@
                             <p class="card-text align-bottom">OG</p>
                         </div>
                     </div>
-
-
-
+                
+            
+                
                     <div class="card col-sm-6 col-md-3" style="border-width: 1px; border-color: #005D04;">
                         <a href="example-event-3"></a>
                         <div class="card-body">
@@ -153,74 +154,113 @@
                             <p class="card-text align-bottom">US</p>
                         </div>
                     </div>
-
-
-
-
+                
+            
+                
+            
         </div>
     </div>
 </section>
 
+<section id="countdown">
+    <div class="container inner-top-md">
+        <div class="row">
+            <div class="col-md-8 col-sm-9 center-block text-center">
+                <header id="countdown-1"></header>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="text">
+    <div class="container inner-top-md">
+        <div class="row">
+            <div class="col-md-8 col-sm-9 center-block text-center">
+                <p>
+                    Devpost submissions: <a href="https://devpost.com/">devpost.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.rawgit.com/HugoGiraudel/Countdown.js/master/countdown.js"></script>
+
+<script type="text/javascript">
+    var c1 = new Countdown({
+        selector: '#countdown-1',
+        msgBefore: '<h1 id="countdown-2"></h1><p>until the hacking begins</p>',
+        msgAfter: '<h1>It\'s all over now.</h1>',
+        msgPattern: '<h1>{hours} hours {minutes} minutes {seconds} seconds</h1><p>left to hack</p>',
+        dateStart: new Date('2021-02-19T18:00:00+00:00'),
+        dateEnd: new Date('2021-02-21T14:00:00+00:00')
+    }), c2 = new Countdown({
+        selector: '#countdown-2',
+        msgBefore: '',
+        msgAfter: '',
+        msgPattern: '{hours} hours {minutes} minutes {seconds} seconds',
+        dateStart: new Date(),
+    });
+</script>
+
+<script type="text/javascript">
+    function initMap() {
+        var coords = {lat: 51.4253791, lng: -0.5674995},
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: coords,
+            zoom: 16,
+            keyboardShortcuts: false,
+            disableDefaultUI: true,
+            scrollwheel: false,
+            disableDoubleClickZoom: false,
+            draggable: true
+        }),
+        service = new google.maps.places.PlacesService(map);
+        service.getDetails({
+            placeId: 'ChIJXUCjP_55dkgR4OIhA2pQA6A'
+        }, function(place, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: place.geometry.location
+                }), infowindow = new google.maps.InfoWindow();
+                infowindow.setContent('<div><strong>'+place.name+'</strong><br>'+'<p>'+place.formatted_address+'</p></div>');
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.open(map, marker);
+                });
+                google.maps.event.addListenerOnce(map, 'tilesloaded', function() {
+                    infowindow.open(map, marker);
+                });
+            }
+        });
+    }
+</script>
+
 <section id="sponsors">
-                <div class="inner-md">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-sm-9 center-block text-center">
-                                <header>
-                                    <h1>Sponsors</h1>
-                                    <p>Sponsors make this event possible from providing food to awesome APIs and technology. We offer you the chance to engage with the next generation of innovators, to demonstrate your products and teach them new things alongside unique recruitment opportunities.</p>
-                                    <a href="{{ site.baseurl }}assets/pdf/sponsordeck.pdf" class="btn">Become a Sponsor</a>
-                                </header>
-                            </div>
-                        </div>
-                    </div>
-
-                    {% if site.event.public %}
-                    {% for s in site.sponsors %}
-                    {% assign i = forloop.index0 %}
-                    {% if s[0] == 'gold' %}
-                    {% capture id %}gold-sponsors{% endcapture %}
-                    {% capture heading %}Gold Sponsors{% endcapture %}
-                    {% elsif s[0] == 'silver' %}
-                    {% capture id %}silver-sponsors{% endcapture %}
-                    {% capture heading %}Silver Sponsors{% endcapture %}
-                    {% elsif s[0] == 'bronze' %}
-                    {% capture id %}bronze-sponsors{% endcapture %}
-                    {% capture heading %}Bronze Sponsors{% endcapture %}
-                    {% elsif s[0] == 'partner' %}
-                    {% capture id %}partners{% endcapture %}
-                    {% capture heading %}Partners{% endcapture %}
-                    {% endif %}
-
-                    {% if s[1].size > 0 %}
-                    <div id="{{ id }}" class="container">
-                        <div class="row inner-sm">
-                            <div class="col-md-8 col-sm-9 center-block text-center">
-                                <header>
-                                    <h2 style="text-transform: uppercase;">{{ heading }}</h2>
-                                </header>
-                            </div>
-                        </div>
-                    </div>
-                    {% endif %}
-
-                    {% for sponsor in s[1] %}
-                    {% assign j = forloop.index0 %}
-                    <div id="{{ s[1][j].name }}" class="row vertical-center sponsor {{ s[1][j].shade }}-bg inner-right-xs inner-left-xs" style="background-color:#0B082C">
-                        <div class="col-md-5 col-md-offset-1 col-sm-6 inner-top-xs inner-right-xs inner-bottom-xs">
-                            <a href="{{ s[1][j].url }}">
-                                <img class="center-block" src="{{ site.baseurl }}assets/images/sponsors{{ s[1][j].logo }}" alt="{{ s[1][j].name }}" />
-                            </a>
-                        </div>
-                        <div class="col-md-5 col-sm-6 inner-top-xs inner-bottom-xs inner-left-xs">
-                            <p>{{ s[1][j].description }}</p>
-                        </div>
-                    </div>
-                    {% endfor %}
-                    {% endfor %}
-                    {% endif %}
+    <div class="inner-md">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-9 center-block text-center">
+                    <header>
+                        <h1>Sponsors</h1>
+                        <p>Sponsors make this event possible from providing food to awesome APIs and technology. We offer you the chance to engage with the next generation of innovators, to demonstrate your products and teach them new things alongside unique recruitment opportunities.</p>
+                        <a href="assets/pdf/sponsordeck.pdf" class="btn">Become a Sponsor</a>
+                    </header>
                 </div>
-            </section>
+            </div>
+        </div>
+
+        
+    </div>
+</section>
+
+<section id="team" class="light-bg">
+    <div class="container">
+        Who are we? Good question.
+    </div>
+</section>
+
+
 
         </main>
 
