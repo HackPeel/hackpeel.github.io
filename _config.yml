@@ -1,6 +1,6 @@
 ---
 repository: HackPeel/peelhacks.github.io
-include: ["index.html", "_events",]
+include: ["index.html", "_events", "_includes"]
 
 # Homepage settings
 splash_title: 'hack::peel'
@@ -21,6 +21,9 @@ navs:
   -
     name: Events
     link: "/#future-events"
+  -
+    name: Sponsors
+    link: '/#sponsors'
   -
     name: Sponsor us
     link: "/assets/pdf/sponsordeck.pdf"
