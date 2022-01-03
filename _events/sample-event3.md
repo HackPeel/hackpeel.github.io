@@ -4,13 +4,13 @@
 layout: event
 
 # Event info
-name: ""
+name: "Sample event 3"
 location: ""
 
-short-description: ""
-display-date: ""
+short-description: "This is a sample event."
+display-date: "2022-02-21"
 
-is-public: false # Makes this event visible in events list
+is-public: true # Makes this event visible in events list
 
 start: "2099-01-01T12:00:00+00:00"
 end: "2001-01-01T12:00:00+00:00"
@@ -18,7 +18,7 @@ end: "2001-01-01T12:00:00+00:00"
 full-description: ""
 
 # Styling
-color: "#FFFFFF"
+color: "#EB6824"
 
 # Jumbotron
 display-logo: false
@@ -33,17 +33,17 @@ disable-button: true
 tickets: "https://eventbrite.com"
 ticket-button-text: "RSVP"
 
-show-sponsors-list: false
+show-sponsors-list: true
 sponsors:
     -
       Name: "Example"
       Link: "https://www.example.com/"
-      Icon: ""
+      Icon: "rh-small.svg"
       Colour: #A60000
     -
       Name: "Example2"
       Link: "https://www.example.com"
-      Icon: ""
+      Icon: "rh-small.svg"
       Colour: #A60000
 
 ---

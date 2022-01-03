@@ -13,12 +13,18 @@
         <div class="row">
             <div class="col-md-8 col-sm-9 center-block text-center">
                 <p>
-                    Devpost submissions: <a href="https://devpost.com/">devpost.com</a>
+                    Twitch Stream Link: <a href="https://google.com">LINK TO BE ADDED (GGHSHSEH)</a>
+                </p>
+
+                <p>
+                    Devpost submissions: <a href="https://devpost.com">LINK TO BE ADDED (AABABAB)</a>
                 </p>
             </div>
         </div>
     </div>
 </section>
+
+<section id="map" class="height-sm"></section>
 
 <script src="https://cdn.rawgit.com/HugoGiraudel/Countdown.js/master/countdown.js"></script>
 
@@ -27,15 +33,16 @@
         selector: '#countdown-1',
         msgBefore: '<h1 id="countdown-2"></h1><p>until the hacking begins</p>',
         msgAfter: '<h1>It\'s all over now.</h1>',
-        msgPattern: '<h1>{hours} hours {minutes} minutes {seconds} seconds</h1><p>left to hack</p>',
-        dateStart: new Date('2021-02-19T18:00:00+00:00'),
-        dateEnd: new Date('2021-02-21T14:00:00+00:00')
+        msgPattern: '<h1>{days} days {hours} hours {minutes} minutes {seconds} seconds</h1><p>left to hack</p>',
+        dateStart: new Date('2022-02-18T12:00:00+00:00'), //todo add actual dates
+        dateEnd: new Date('2022-02-21T12:00:00+00:00')
     }), c2 = new Countdown({
         selector: '#countdown-2',
         msgBefore: '',
         msgAfter: '',
-        msgPattern: '{hours} hours {minutes} minutes {seconds} seconds',
+        msgPattern: '{days} days {hours} hours {minutes} minutes {seconds} seconds',
         dateStart: new Date(),
+        dateEnd: new Date('2022-02-18T12:00:00+00:00')
     });
 </script>
 
