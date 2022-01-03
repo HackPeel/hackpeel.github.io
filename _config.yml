@@ -16,8 +16,8 @@ footer-description: "We are extremely cool people doing extremely cool things"
 # Links for the navbar
 navs:
   -
-    name: Home
-    link: "/#top"
+    name: About
+    link: "/#about"
   -
     name: Events
     link: "/#future-events"
@@ -27,6 +27,9 @@ navs:
   -
     name: Sponsor us
     link: "/assets/pdf/sponsordeck.pdf"
+  -
+    name: The Team
+    link: "/#team"
 
 
 # Social media links included on the splash page
@@ -34,15 +37,15 @@ navs:
 #   -
 #     icon: "facebook-white.svg"
 #     name: Facebook
-#     url: "https://facebook.com/royalhackaway"
+#     url: "https://facebook.com/hackpeel"
 #   -
 #     icon: "twitter.svg"
 #     name: Twitter
-#     url: "https://twitter.com/royalhackaway"
+#     url: "https://twitter.com/hackpeel"
 #   -
 #     icon: "github-mark.png"
 #     name: GitHub
-#     url: "https://github.com/royalhackaway"
+#     url: "https://github.com/HackPeel"
 
 email: fakeemail@gmail.com
 
