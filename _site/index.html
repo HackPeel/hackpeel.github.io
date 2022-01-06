@@ -112,96 +112,28 @@
     </div>
 </section>
 
-
-<section id="hackaway-ad">
-    
-        <div class="container text-center">
-            <h2><b>Makes you look, doesn't it?</b></h2>
-            <p>This banner's here to emphasise a particular event. A big hackathon for example?</p>
-            <a class="btn btn-outline-light" href="https://devpost.com">Sign up</a>
-        </div>
-    
-</section>
-
 <section id="countdown">
-    <div class="container inner-top-md">
-        <div class="row">
-            <div class="col-md-8 col-sm-9 center-block text-center">
-                <header id="countdown-1"></header>
-            </div>
-        </div>
-    </div>
+    <div class="container inner-top-md" id="countdown-1"></div>
 </section>
-
-<section id="text">
-    <div class="container inner-top-md">
-        <div class="row">
-            <div class="col-md-8 col-sm-9 center-block text-center">
-                <p>
-                    Twitch Stream Link: <a href="https://google.com">LINK TO BE ADDED (GGHSHSEH)</a>
-                </p>
-
-                <p>
-                    Devpost submissions: <a href="https://devpost.com">LINK TO BE ADDED (AABABAB)</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="map" class="height-sm"></section>
 
 <script src="https://cdn.rawgit.com/HugoGiraudel/Countdown.js/master/countdown.js"></script>
 
 <script type="text/javascript">
     var c1 = new Countdown({
         selector: '#countdown-1',
-        msgBefore: '<h1 id="countdown-2"></h1><p>until the hacking begins</p>',
-        msgAfter: '<h1>It\'s all over now.</h1>',
-        msgPattern: '<h1>{days} days {hours} hours {minutes} minutes {seconds} seconds</h1><p>left to hack</p>',
+        msgBefore: '<h1 style="text-align: center;font-size: 5vmax" id="countdown-2"></h1><p style="text-align: center;font-size: 2vmax">until hacking begins</p><div style="text-align: center;width: 100%"><a style="font-size: 1.2vmax" class="btn btn-outline-light" href="https://devpost.com">Sign up</a></div>',
+        msgAfter: '<h1 style="text-align: center;font-size: 5vmax">It\'s all over now...</h1><div style="text-align: center;width: 100%"><a style="font-size: 1.2vmax" class="btn btn-outline-light" href="https://devpost.com">View submissions</a></div>',
+        msgPattern: '<h1 style="text-align: center;font-size: 5vmax" id="countdown-2"></h1><p style="text-align: center;font-size: 2vmax">left to hack</p>',
         dateStart: new Date('2022-02-18T12:00:00+00:00'), //todo add actual dates
         dateEnd: new Date('2022-02-21T12:00:00+00:00')
     }), c2 = new Countdown({
         selector: '#countdown-2',
         msgBefore: '',
         msgAfter: '',
-        msgPattern: '{days} days {hours} hours {minutes} minutes {seconds} seconds',
+        msgPattern: '{days} D&nbsp;&nbsp;&nbsp;&nbsp;{hours} H&nbsp;&nbsp;&nbsp;&nbsp;{minutes} M&nbsp;&nbsp;&nbsp;&nbsp;{seconds} S',
         dateStart: new Date(),
         dateEnd: new Date('2022-02-18T12:00:00+00:00')
     });
-</script>
-
-<script type="text/javascript">
-    function initMap() {
-        var coords = {lat: 51.4253791, lng: -0.5674995},
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: coords,
-            zoom: 16,
-            keyboardShortcuts: false,
-            disableDefaultUI: true,
-            scrollwheel: false,
-            disableDoubleClickZoom: false,
-            draggable: true
-        }),
-        service = new google.maps.places.PlacesService(map);
-        service.getDetails({
-            placeId: 'ChIJXUCjP_55dkgR4OIhA2pQA6A'
-        }, function(place, status) {
-            if (status === google.maps.places.PlacesServiceStatus.OK) {
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: place.geometry.location
-                }), infowindow = new google.maps.InfoWindow();
-                infowindow.setContent('<div><strong>'+place.name+'</strong><br>'+'<p>'+place.formatted_address+'</p></div>');
-                google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.open(map, marker);
-                });
-                google.maps.event.addListenerOnce(map, 'tilesloaded', function() {
-                    infowindow.open(map, marker);
-                });
-            }
-        });
-    }
 </script>
 
 <section id="future-events" class="light-bg">
@@ -2082,7 +2014,7 @@
 
             <div class="col-md-4 col-sm-6 inner">
                 <h4>Contact Us</h4>
-                <a class="no-hover-style" href="mailto:fakeemail@gmail.com"><i class="contact"></i> fakeemail@gmail.com</a>
+                <a class="no-hover-style" href="mailto:hi@hackpeel.com"><i class="contact"></i> hi@hackpeel.com</a>
             </div>
         </div>
     </div>
