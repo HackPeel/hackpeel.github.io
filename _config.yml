@@ -20,7 +20,7 @@ navs:
     link: "/#about"
   -
     name: Events
-    link: "/#future-events"
+    link: "/#timetable"
   -
     name: Sponsors
     link: '/#sponsors'
