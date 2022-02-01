@@ -1,6 +1,6 @@
 ---
 repository: HackPeel/peelhacks.github.io
-include: ["index.html", "_events", "_sponsors"]
+include: ["index.html", "_sponsors"]
 
 # Homepage settings
 splash_title: 'hack::peel'
