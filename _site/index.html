@@ -1,4 +1,31 @@
 <!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
 <html lang="en">
     <head>
     <meta charset="utf-8" />
@@ -83,8 +110,8 @@
         <div id="socials" class="row justify-content-center">
             
         </div>
-            <div style="  display: flex; justify-content: space-between; max-width: 18%; margin: 0 auto; padding: 10px 0;">
-                <a style="" class="btn btn-primary btn-lg text-light" href="#future-events">Start Hacking</a>
+            <div style="display: flex; justify-content: space-between; max-width: 18%; margin: 0 auto; padding: 10px 0; padding-top: 50px">
+                <a style="" class="btn btn-primary btn-lg text-light" href="https://hackpeel.devpost.com/">Start Hacking</a>
                 <a style="background: #5865F2; box-shadow: 0 5px #4a51a8" class="btn btn-primary btn-lg text-light" href="https://discord.gg/uwM296nt">Discord server</a>
             </div>
     </div>
@@ -92,11 +119,11 @@
 
 <section id="faq" class="light-bg">
     <div class="container">
-        <div style="height: 20%" class="row justify-content-md-center">
-            <h2 class="display-4">Frequently asked questions</h2>
+        <div style="height: 20%;  padding-bottom: 3%" class="row justify-content-md-center">
+            <h2 style="justify-content: center" class="display-4">Frequently asked questions</h2>
         </div>
 
-        <div id="faq-items-container" class="row">
+        <div id="faq-items-container" class="row" style="display: flex; justify-content: space-between; max-width: 100%; margin: 0 auto; padding: 10% 0; padding-top: 5%">
             <div class="col-sm-4">
                 <div class="faq-item">
                     <h3 class="text-left text-muted">What's a hackathon?</h3>
@@ -120,7 +147,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-4 ">
+            <div class="col-sm-4">
                 <div class="faq-item " >
                     <h3 class="text-left text-muted">When is the hackathon?</h3>
                     <p>
@@ -179,7 +206,7 @@
 <script type="text/javascript">
     var c1 = new Countdown({
         selector: '#countdown-1',
-        msgBefore: '<h1 style="text-align: center;font-size: 5vmax" id="countdown-2"></h1><p style="text-align: center;font-size: 2vmax">until hacking begins</p><div style="text-align: center;width: 100%"><a style="font-size: 1.2vmax" class="btn btn-outline-light" href="https://devpost.com">Sign up</a></div>',
+        msgBefore: '<h1 style="text-align: center;font-size: 5vmax" id="countdown-2"></h1><p style="text-align: center;font-size: 2vmax">until hacking begins</p><div style="text-align: center;width: 100%"><a style="font-size: 1.2vmax" class="btn btn-outline-light" href="https://hackpeel.devpost.com/">Sign up</a></div>',
         msgAfter: '<h1 style="text-align: center;font-size: 5vmax">It\'s all over now...</h1><div style="text-align: center;width: 100%"><a style="font-size: 1.2vmax" class="btn btn-outline-light" href="https://devpost.com">View submissions</a></div>',
         msgPattern: '<h1 style="text-align: center;font-size: 5vmax" id="countdown-2"></h1><p style="text-align: center;font-size: 2vmax">left to hack</p>',
         dateStart: new Date('2022-03-12T12:00:00+00:00'), //todo add actual dates
@@ -196,10 +223,10 @@
 
 <section id="timetable">
     <div class="container">
+        <div style="height: 20%; padding-bottom: 6%" class="row justify-content-md-center">
+            <h2 class="display-4">Hackathon Schedule</h2>
+        </div>
         <div class="row">
-
-
-
             <div class="col-sm">
                 <table class="table table-bordered table-striped">
                     <thead>
@@ -399,7 +426,7 @@
     </div>
 </section>
 <section id='sponsors' class="half-height sponsors">
-    <h2 class="sponsors-title text-center display-4">Sponsors</h2>
+    <h2 class="sponsors-title text-center display-4">Sponsors coming soon</h2>
 
     <div class="sponsor-tier">
         <h2 class="text-center" style="color: "><b></b></h2>
@@ -1923,8 +1950,8 @@
 <section id="team" class="light-bg">
     <body>
     <div class="container">
-        <div class="section-title">
-            <h1>The Team:</h1>
+        <div style="height: 20%; padding-bottom: 6%" class="row justify-content-md-center">
+            <h2 class="display-4"><strong>The Team</strong></h2>
         </div>
         <div class="row">
             <div class="column">
@@ -1944,7 +1971,7 @@
                     </div>
                     <div class="team-content">
                         <h2>Aayush Panda</h2>
-                        <h3>Person</h3>
+                        <h3>Organisation, outreach and development</h3>
                     </div>
                 </div>
             </div>
@@ -1962,7 +1989,7 @@
                     </div>
                     <div class="team-content">
                         <h2>Vishnu Satish</h2>
-                        <h3>Cool person</h3>
+                        <h3>Outreach, sponsorships</h3>
                     </div>
                 </div>
             </div>
@@ -1977,7 +2004,7 @@
                     </div>
                     <div class="team-content">
                         <h2>Max Liu</h2>
-                        <h3>Cooler person</h3>
+                        <h3>Outreach, design</h3>
                     </div>
                 </div>
             </div>
@@ -1996,7 +2023,7 @@
                     </div>
                     <div class="team-content">
                         <h2>Nathan Chung</h2>
-                        <h3>Coolest person</h3>
+                        <h3>Organisation, development</h3>
                     </div>
                 </div>
             </div>
@@ -2012,7 +2039,7 @@
                     </div>
                     <div class="team-content">
                         <h2>Catherine Zhang</h2>
-                        <h3>Designer</h3>
+                        <h3>Design, outreach</h3>
                     </div>
                 </div>
             </div>
@@ -2031,7 +2058,7 @@
                     </div>
                     <div class="team-content">
                         <h2>Raymond Li</h2>
-                        <h3>Coolest person</h3>
+                        <h3>Outreach</h3>
                     </div>
                 </div>
             </div>
@@ -2050,7 +2077,7 @@
                     </div>
                     <div class="team-content">
                         <h2>Marcus Chong</h2>
-                        <h3>Coolest person</h3>
+                        <h3>Outreach and sponsorships</h3>
                     </div>
                 </div>
             </div>
@@ -2066,7 +2093,7 @@
                     </div>
                     <div class="team-content">
                         <h2>Jeffrey-Kai Li</h2>
-                        <h3>Coolest person</h3>
+                        <h3>Outreach, sponsorships</h3>
                     </div>
                 </div>
             </div>
@@ -2086,7 +2113,7 @@
                     </div>
                     <div class="team-content">
                         <h2>Param Thakkar</h2>
-                        <h3>Advisor and Outreach</h3>
+                        <h3>Advisor, outreach</h3>
                     </div>
                 </div>
             </div>
@@ -2099,12 +2126,12 @@
 
         <footer class="bg-dark text-light">
     <div class="container">
-        <div class="row">
+        <div class="row" style="padding-bottom: 4%">
             <div id="hackaway-foot-desc" class="col-md-4 col-sm-6">
                 <a href="#top">
                     <img id="hackaway-logo" class="logo" src="/assets/images/footer-logo.svg" alt="hack::peel" />
                 </a>
-                <p>We are extremely cool people doing extremely cool things</p>
+                <!-- <p>We are extremely cool people doing extremely cool things</p> -->
             </div>
 
             <div class="col-md-4 col-sm-6 inner">
