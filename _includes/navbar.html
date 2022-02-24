@@ -10,7 +10,7 @@
                     {% for nav in site.navs %}
                         {% assign link = site.url | append: nav.link %}
                         <li>
-                            <a href="{{ link }}" class="nav-link text-dark" data-anchor-offset="0">{{ nav.name }}</a>
+                            <a href="{{ link }}" target="_blank" rel="noopener noreferrer" class="nav-link text-dark" data-anchor-offset="0">{{ nav.name }}</a>
                         </li>
                     {% endfor %}
                 </ul>
