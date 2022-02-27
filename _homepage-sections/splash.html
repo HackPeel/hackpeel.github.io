@@ -1,17 +1,19 @@
 <section class="full-height" id="top">
-    <div class="jumbotron jumbotron-fluid background-image full-height" style="background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url( {{ "/assets/images/" | relative_url }}{{ site.homepage_banner_image }});">
-        <h1 class="display-1 text-light">{{ site.splash_title }}</h1>
-        <h2 class=" text-light">{{ site.splash_subtitle }}</h2>
-        <div id="socials" class="row justify-content-center">
-            {% for social in site.socials %}
+    <div class="center jumbotron jumbotron-fluid background-image full-height" style="background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url( {{ "/assets/images/" | relative_url }}{{ site.homepage_banner_image }});">
+        <div class="full-height relative-center">
+            <h1 style="max-width: 100%; font-size: 16vmin" class="flex-justify-center display-1 text-light">{{ site.splash_title }}</h1>
+            <h2 class="text-light">{{ site.splash_subtitle }}</h2>
+            <div id="socials" class="row justify-content-center">
+                {% for social in site.socials %}
                 <a href="{{ social.url }}">
                     <img class="social-icon img-fluid" alt="{{ social.icon }}" src="{{"/assets/images/social_icons/" | relative_url }}{{ social.icon }}" />
                 </a>
-            {% endfor %}
-        </div>
-            <div style="display: flex; justify-content: space-between; max-width: 18%; margin: 0 auto; padding: 10px 0; padding-top: 50px">
-                <a style="" class="btn btn-primary btn-lg text-light" href="https://hackpeel.devpost.com/" target="_blank" rel="noopener noreferrer">Start Hacking</a>
-                <a style="background: #5865F2; box-shadow: 0 5px #4a51a8" class="btn btn-primary btn-lg text-light" href="https://discord.gg/uwM296nt" target="_blank" rel="noopener noreferrer">Discord server</a>
+                {% endfor %}
             </div>
+            <div style="flex-direction: row; display: flex; align-items: center; justify-content: space-evenly; max-width: 450px; margin: 0 auto; padding: 20px 0; padding-top: 35px">
+                <a style="" class="btn btn-primary btn-lg text-light" href="https://hackpeel.devpost.com/" target="_blank" rel="noopener noreferrer">Start Hacking</a>
+                <a style="" class="btn btn-discord btn-lg text-light" href="https://discord.gg/uwM296nt" target="_blank" rel="noopener noreferrer">Discord server</a>
+            </div>
+        </div>
     </div>
 </section>
