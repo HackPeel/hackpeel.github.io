@@ -50,12 +50,6 @@ navs:
 email: contact@hackpeel.ca
 
 
-collections:
-  events:
-    output: true
-    permalink: /:slug
-
-
 sass:
   style: compressed
   sass_dir: _sass

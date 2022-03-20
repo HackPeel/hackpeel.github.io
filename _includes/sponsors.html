@@ -1,16 +1,15 @@
 <section class="half-height sponsors">
     <h2 class="sponsors-title text-center display-4">Sponsors</h2>
-    {% for tier in page.sponsors %}
-        <div class="sponsor-tier">
-            <h2 class="text-center" style="color: {{ tier.colour }}"><b>{{ tier.name }}</b></h2>
-            <div class="row justify-content-center">
-                {% for sponsor in tier.tier-sponsors %}
-                    <a id="{{ sponsor.name }}" href="{{ sponsor.link }}" class="sponsor align-middle col-md-2 rounded row" style="background-color: {{ sponsor.colour }}; box-shadow: 4px 5px {{ sponsor.shadow-colour }};">
-                        <img class="col-12" src= "{{ site.baseurl }}assets/images/sponsors/{{ sponsor.image }}" alt="{{ sponsor.name }}" />
-                    </a>
-                {% endfor %}
-            </div>
+    {% for row in site.data.sponsors %}
+    <div class="sponsor-tier">
+        <div class="row justify-content-center">
+            {% for sponsor in row %}
+            <a id="{{ sponsor.name }}" href="{{ sponsor.link }}" class="sponsor align-middle col-md-2 rounded row" style="box-shadow: 4px 5px rgba(46,51,56,0.45);">
+                <img class="col-12" src= "/assets/images/sponsor_logos/echo3D.png"/>
+            </a>
+            {% endfor %}
         </div>
+    </div>
     {% endfor %}
     <div class="text-center">
         <a href="/assets/pdf/sponsordeck.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg btn-text-light">Become a sponsor</a>
