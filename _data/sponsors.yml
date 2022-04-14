@@ -5,3 +5,6 @@
     - name: DigitalOcean
       link: https://www.digitalocean.com/
       image: DigitalOcean.png
+    - name: Voiceflow
+      link: https://www.voiceflow.com/
+      image: Voiceflow.png
