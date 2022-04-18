@@ -1,0 +1,30 @@
+- day_text: Friday — Apr. 29
+  events:
+    - name: Opening ceremony
+      time: 18:00
+    - name: Hacking begins
+      time: 19:00
+    - name: Workshops begin
+      time: 20:00
+    - name: End of day 1
+      time: 23:59
+- day_text: Saturday — Apr. 30
+  events:
+    - name: Opening ceremony
+      time: 18:00
+    - name: Hacking begins
+      time: 19:00
+    - name: Workshops begin
+      time: 20:00
+    - name: End of day 1
+      time: 23:59
+- day_text: Sunday — May 01
+  events:
+    - name: Opening ceremony
+      time: 18:00
+    - name: Hacking begins
+      time: 19:00
+    - name: Workshops begin
+      time: 20:00
+    - name: End of day 1
+      time: 23:59

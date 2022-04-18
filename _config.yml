@@ -18,9 +18,9 @@ navs:
   -
     name: FAQ
     link: "/#faq"
-  -
-    name: Events
-    link: "/#timetable"
+#  -
+#    name: Events
+#    link: "/#timetable"
   -
     name: Sponsors
     link: '/#sponsors'

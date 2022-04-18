@@ -4,142 +4,33 @@
             <h2 class="sponsors-title text-center display-4">Hackathon Schedule</h2>
         </div>
         <div class="row">
-            <div class="col-sm">
-                <table class="table table-bordered table-striped">
-                    <thead>
-                    <tr>
-                        <th class="text-center" colspan="4">Friday — Apr. 29</th>
-                    </tr>
-                    </thead>
 
-                    <tbody>
-
-
-                    <tr>
-                        <td>18:00</td>
-                        <td>Opening ceremony</td>
-                    </tr>
-
-
-                    <tr>
-                        <td>19:00</td>
-                        <td>Hacking begins</td>
-                    </tr>
-
-                    <tr>
-                        <td>20:00</td>
-                        <td>Workshops begin</td>
-                    </tr>
-
-                    <tr>
-                        <td>23:59</td>
-                        <td>End of day 1</td>
-                    </tr>
-
-                    </tbody>
-                </table>
-            </div>
-
+            {% for day in site.data.timetable %}
 
             <div class="col-sm">
                 <table class="table table-bordered table-striped">
                     <thead>
                     <tr>
-                        <th class="text-center" colspan="4">Saturday — Apr. 30</th>
-                    </tr>
-                    </thead>
-
-                    <tbody>
-                    <tr>
-                        <td>13:00</td>
-                        <td>Sponsor workshop</td>
-                    </tr>
-
-
-                    <tr>
-                        <td>15:00</td>
-                        <td>Using APIs (Workshop)</td>
-                    </tr>
-
-
-                    <tr>
-                        <td>16:00</td>
-                        <td>Git and GitHub (Workshop)</td>
-                    </tr>
-
-
-                    <tr>
-                        <td>16:00</td>
-                        <td>How to manage your team and win at hackathons (Workshop)</td>
-                    </tr>
-
-
-                    <tr>
-                        <td>18:00</td>
-                        <td>Sponsor workshop</td>
-                    </tr>
-
-
-                    <tr>
-                        <td>21:00</td>
-                        <td>AGILE software development course</td>
-                    </tr>
-
-
-                    <tr>
-                        <td>23:59</td>
-                        <td>End of day 2</td>
-                    </tr>
-
-                    </tbody>
-                </table>
-            </div>
-
-
-            <div class="col-sm">
-                <table class="table table-bordered table-striped">
-                    <thead>
-                    <tr>
-                        <th class="text-center" colspan="4">Sunday — May 01</th>
+                        <th class="text-center" colspan="4">{{ day.day_text }}</th>
                     </tr>
                     </thead>
 
                     <tbody>
 
+                    {% for event in day.events %}
 
                     <tr>
-                        <td>08:00</td>
-                        <td>Sponsor workshop</td>
+                        <td>{{ event.time }}</td>
+                        <td>{{ event.name }}</td>
                     </tr>
 
-
-                    <tr>
-                        <td>12:00</td>
-                        <td>Hacking Ends</td>
-                    </tr>
-
-
-                    <tr>
-                        <td>13:00</td>
-                        <td>Presentations</td>
-                    </tr>
-
-
-                    <tr>
-                        <td>15:00</td>
-                        <td>Judging</td>
-                    </tr>
-
-
-                    <tr>
-                        <td>17:00</td>
-                        <td>Closing Ceremony</td>
-                    </tr>
+                    {% endfor %}
 
                     </tbody>
                 </table>
             </div>
 
+            {% endfor %}
 
         </div>
     </div>
