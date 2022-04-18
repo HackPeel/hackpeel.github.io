@@ -1,0 +1,12 @@
+- name: Aayush Panda
+  role: Lead Organiser
+  image: aayush_p.png
+  socials:
+    - name: social-gh
+      link: https://github.com/AayushPanda/
+    - name: social-li
+      link: https://www.linkedin.com/in/aayush-panda/
+    - name: social-dc
+      link: https://discordapp.com/users/437353866900668418
+    - name: social-in
+      link: https://www.instagram.com/d3cafcoffee0/
