@@ -1,16 +1,12 @@
 ---
 repository: HackPeel/peelhacks.github.io
-include: ["index.html", "_sponsors"]
+include: ["index.html"]
 
 # Homepage settings
 splash_title: 'hack::peel'
 splash_subtitle: 'A Peel-wide hackathon for students to compete, collaborate and learn'
 homepage_banner_image: photos/home_banner.jpg
 display_ad: true
-
-
-
-footer-description: "We are extremely cool people doing extremely cool things"
 
 
 # Links for the navbar
