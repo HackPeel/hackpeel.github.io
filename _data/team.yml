@@ -1,0 +1,100 @@
+- name: Aayush Panda
+  role: Lead Designer
+  image: aayush_p.png
+  socials:
+    - name: gh
+      link: https://github.com/AayushPanda/
+    - name: li
+      link: https://www.linkedin.com/in/aayush-panda/
+    - name: dc
+      link: https://discordapp.com/users/437353866900668418/
+    - name: in
+      link: https://www.instagram.com/d3cafcoffee0/
+
+- name: Pranav Tripathi
+  role: Marketing and Sponsorships co-lead
+  image: pranav_t.jpg
+  socials:
+    - name: dc
+      link: https://discordapp.com/users/243078546833145856/
+
+- name: Vishnu Satish
+  role: Marketing and Sponsorships co-lead
+  image: vishnu_s.png
+  socials:
+    - name: gh
+      link: hhttps://github.com/vishnupsatish/
+    - name: li
+      link: https://www.linkedin.com/in/vishnupsatish/
+
+- name: Catherine Zhang
+  role: Lead Designer
+  image: catherine_z.jpg
+  socials:
+    - name: in
+      link: https://www.instagram.com/aspcaton/
+
+- name: Nathan Chung
+  role: Tech lead
+  image: nathan_c.png
+  socials:
+    - name: gh
+      link: https://github.com/nathan13888/
+    - name: dc
+      link: https://discordapp.com/users/259464008262746113/
+
+- name: Raymond Mei
+  role: Logistics
+  image: raymond_m.png
+  socials:
+    - name: gh
+      link: https://github.com/RaymondMei/
+    - name: dc
+      link: https://discordapp.com/users/349978964955103234/
+
+- name: Marcus Chong
+  role: Logistics
+  image: marcus_c.png
+  socials:
+    - name: gh
+      link: https://github.com/pidddgy/
+    - name: dc
+      link: https://discordapp.com/users/233642573888094218/
+
+- name: Jeffrey-Kai Li
+  role: Outreach
+  image: jeffreykai_l.png
+  socials:
+    - name: gh
+      link: https://github.com/jeffreykaili/
+
+- name: Param Thakkar
+  role: Advisor
+  image: param_t.jpg
+  socials:
+    - name: gh
+      link: https://github.com/paramt
+    - name: li
+      link: https://www.linkedin.com/in/paramt/
+    - name: in
+      link: https://www.instagram.com/xparam/
+
+- name: Max Liu
+  role: Outreach
+  image: max_l.png
+  socials:
+    - name: gh
+      link: https://github.com/maxliu42
+
+
+
+
+
+
+
+
+
+
+
+
+

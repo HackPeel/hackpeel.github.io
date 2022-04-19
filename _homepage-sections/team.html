@@ -1,195 +1,66 @@
-<section id="team" class="light-bg">
+<head>
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</head>
+
+    <section id="team" class="light-bg">
     <body>
     <div class="container">
         <div style="display: flex; justify-content: center; align-items: center;height: 20%; padding-bottom: 6%" class="row justify-content-md-center">
             <h2 class="display-4"><strong>The Team</strong></h2>
         </div>
         <div class="row">
+
+
+            {% for member in site.data.team %}
+
             <div class="column">
                 <div class="team-2">
                     <div class="team-img">
-                        <img src="/assets/images/photos/team_pictures/aayush_p.png" alt="Team Image">
+                        <img src="/assets/images/photos/team_pictures/{{ member.image }}" alt="Team Image">
                         <div class="team-social">
-                            <a class="social-gh" href="https://github.com/AayushPanda" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"
-                                                                                          style="font-size:45.5px;color:black;position:relative;bottom:12.4px;left:0.1px"></i></a>
-                            <a class="social-li" href="https://www.linkedin.com/in/aayush-panda/" target="_blank" rel="noopener noreferrer"><i
+
+                            {% for social in member.socials %}
+
+                            {% if social.name == "gh" %}
+                            <a class="social-gh" href="{{ social.link }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"
+                                                                                                                       style="font-size:45.5px;color:black;position:relative;bottom:12.4px;left:0.1px"></i></a>
+                            {% endif %}
+
+                            {% if social.name == "li" %}
+                            <a class="social-li" href="{{ social.link }}" target="_blank" rel="noopener noreferrer"><i
                                     class="fab fa-linkedin-in"></i></a>
-                            <a class="social-dc" href="https://discordapp.com/users/437353866900668418" target="_blank" rel="noopener noreferrer"><i
+                            {% endif %}
+
+                            {% if social.name == "dc" %}
+                            <a class="social-dc" href="{{ social.link }}" target="_blank" rel="noopener noreferrer"><i
                                     class="fab fa-discord"
                                     style="font-size:45px;color:#5865F2;position:relative;bottom:11px;left:0.1px"></i></a>
-                            <a class="social-in" href="https://www.instagram.com/d3cafcoffee0/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" style="font-size: 20px; align-content: center"></i></a>
+                            {% endif %}
+
+                            {% if social.name == "in" %}
+                            <a class="social-in" href="{{ social.link }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" style="font-size: 20px; align-content: center"></i></a>
+                            {% endif %}
+
+                            {% endfor %}
+
                         </div>
                     </div>
                     <div class="team-content">
-                        <h2>Aayush Panda</h2>
-                        <h3>Lead Organiser</h3>
+                        <h2>{{ member.name }}</h2>
+                        <h3>{{ member.role }}</h3>
                     </div>
                 </div>
             </div>
 
-            <div class="column">
-                <div class="team-2">
-                    <div class="team-img">
-                        <img src="/assets/images/photos/team_pictures/pranav_t.jpg" alt="Team Image">
-                        <div class="team-social">
-                            <a class="social-dc" href="https://discordapp.com/users/243078546833145856" target="_blank" rel="noopener noreferrer"><i
-                                    class="fab fa-discord"
-                                    style="font-size:45px;color:#5865F2;position:relative;bottom:11px;left:0.1px"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h2>Pranav Tripathi</h2>
-                        <h3>Marketing and Sponsorships co-lead</h3>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
 
-            <div class="column">
-                <div class="team-2">
-                    <div class="team-img">
-                        <img src="/assets/images/photos/team_pictures/vishnu_s.png"
-                             alt="Team Image">
-                        <div class="team-social">
-                            <a class="social-gh" href="https://github.com/vishnupsatish" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"
-                                                                                            style="font-size:45.5px;color:black;position:relative;bottom:12.4px;left:0.1px"></i></a>
-                            <a class="social-li" href="https://www.linkedin.com/in/vishnupsatish/" target="_blank" rel="noopener noreferrer"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h2>Vishnu Satish</h2>
-                        <h3>Marketing and Sponsorships co-lead</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="team-2">
-                    <div class="team-img">
-                        <img src="/assets/images/photos/team_pictures/catherine_z.jpg"
-                             alt="Team Image">
-                        <div class="team-social">
-                            <a class="social-in" href="https://www.instagram.com/aspcaton/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" style="font-size: 20px; align-content: center"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h2>Catherine Zhang</h2>
-                        <h3>Design Lead</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="team-2">
-                    <div class="team-img">
-                        <img src="/assets/images/photos/team_pictures/nathan_c.png"
-                             alt="Team Image">
-                        <div class="team-social">
-                            <a class="social-gh" href="https://github.com/nathan13888" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"
-                                                                                         style="font-size:45.5px;color:black;position:relative;bottom:12.4px;left:0.1px"></i></a>
-                            <a class="social-dc" href="https://discordapp.com/users/259464008262746113" target="_blank" rel="noopener noreferrer"><i
-                                    class="fab fa-discord"
-                                    style="font-size:45px;color:#5865F2;position:relative;bottom:11px;left:0.1px"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h2>Nathan Chung</h2>
-                        <h3>Tech Lead</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="team-2">
-                    <div class="team-img">
-                        <img src="/assets/images/photos/team_pictures/raymond_l.png"
-                             alt="Team Image">
-                        <div class="team-social">
-                            <a class="social-gh" href="https://github.com/RaymondMei" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"
-                                                                                          style="font-size:45.5px;color:black;position:relative;bottom:12.4px;left:0.1px"></i></a>
-                            <a class="social-dc" href="https://discordapp.com/users/349978964955103234" target="_blank" rel="noopener noreferrer"><i
-                                    class="fab fa-discord"
-                                    style="font-size:45px;color:#5865F2;position:relative;bottom:11px;left:0.1px"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h2>Raymond Mei</h2>
-                        <h3>Logistics</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="team-2">
-                    <div class="team-img">
-                        <img src="/assets/images/photos/team_pictures/marcus_c.png"
-                             alt="Team Image">
-                        <div class="team-social">
-                            <a class="social-gh" href="https://github.com/pidddgy/" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"
-                                                                                          style="font-size:45.5px;color:black;position:relative;bottom:12.4px;left:0.1px"></i></a>
-                            <a class="social-dc" href="https://discordapp.com/users/233642573888094218" target="_blank" rel="noopener noreferrer"><i
-                                    class="fab fa-discord"
-                                    style="font-size:45px;color:#5865F2;position:relative;bottom:11px;left:0.1px"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h2>Marcus Chong</h2>
-                        <h3>Logistics</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="team-2">
-                    <div class="team-img">
-                        <img src="/assets/images/photos/team_pictures/jeffreykai_l.png"
-                             alt="Team Image">
-                        <div class="team-social">
-                            <a class="social-gh" href="https://github.com/jeffreykaili" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"
-                                                                                       style="font-size:45.5px;color:black;position:relative;bottom:12.4px;left:0.1px"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h2>Jeffrey-Kai Li</h2>
-                        <h3>Outreach, sponsorships</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="team-2">
-                    <div class="team-img">
-                        <img src="/assets/images/photos/team_pictures/param_t.jpg"
-                             alt="Team Image">
-                        <div class="team-social">
-                            <a class="social-gh" href="https://github.com/paramt" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"
-                                                                                           style="font-size:45.5px;color:black;position:relative;bottom:12.4px;left:0.1px"></i></a>
-                            <a class="social-in" href="https://www.instagram.com/xparam/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" style="font-size: 20px; align-content: center"></i></a>
-                            <a class="social-li" href="https://www.linkedin.com/in/paramt/" target="_blank" rel="noopener noreferrer"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h2>Param Thakkar</h2>
-                        <h3>Advisor</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="team-2">
-                    <div class="team-img">
-                        <img src="/assets/images/photos/team_pictures/max_l.png" alt="Team Image">
-                        <div class="team-social">
-                            <a class="social-gh" href="https://github.com/maxliu42" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"
-                                                                                                                                 style="font-size:45.5px;color:black;position:relative;bottom:12.4px;left:0.1px"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h2>Max Liu</h2>
-                        <h3>Outreach</h3>
-                    </div>
-                </div>
-            </div>
 
         </div>
     </div>
