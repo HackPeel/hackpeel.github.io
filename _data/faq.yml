@@ -1,0 +1,29 @@
+- data:
+  - question: What's a hackathon?
+    answer: Hackathons are 'development marathons', where people collaborate intensively over a short period of time to create a working project.
+
+  - question: Are there any requirements to attend?
+    answer: Nope! Anyone can join this hackathon, however software development experience is recommended.
+
+  - question: Is hack::peel running online, or in-person?
+    answer: Due to COVID-19 restrictions and guidelines, this event is running exclusively online.
+
+- data:
+  - question: When is the hackathon
+    answer: The hackathon is planned to run from Apr 29 - May 01. Check the [timetable](/#timetable) for more information.
+
+  - question: Who can attend?
+    answer: Any student enrolled in a Peel region high-school can attend this hackathon.
+
+  - question: Are there any prizes for winners?
+    answer: With the help of our sponsors, we will be providing monetary as well as software and API prizes to the chosen winners.
+
+- data:
+  - question: Who owns my project?
+    answer: You and your team own anything you create. Why not make it open source, on [Github](https://github.com/)?
+
+  - question: Can I start work before the hackathon begins?
+    answer: While you can explore ideas, you are not allowed to write code or begin working on the project before the hacking period of the hackathon starts.
+
+  - question: Is there a theme for the hackathon?
+    answer: To allow for as much creative liberty, there is no required project theme.

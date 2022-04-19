@@ -1,78 +1,30 @@
 <section id="faq" class="light-bg">
     <div class="container">
-        <div style="display: flex; justify-content: center; align-items: center; height: 20%;  padding-top: 5%;" class="row justify-content-md-center">
+        <div style="display: flex; justify-content: center; align-items: center; height: 20%;  padding-top: 5%;"
+             class="row justify-content-md-center">
             <h2 style="justify-content: center" class="text-center display-4">Frequently asked questions</h2>
         </div>
 
-        <div id="faq-items-container" class="row" style="display: flex; justify-content: space-between; max-width: 100%; margin: 0 auto; padding-bottom: 10%; padding-top: 5%">
-            <div class="col-sm-4">
-                <div class="faq-item">
-                    <h3 class="text-left text-muted">What's a hackathon?</h3>
-                    <p>
-                        Hackathons are 'development marathons', where people collaborate intensively over a short period of time to create a working project.
-                    </p>
-                </div>
+        <div id="faq-items-container" class="row"
+             style="display: flex; justify-content: space-between; max-width: 100%; margin: 0 auto; padding-bottom: 10%; padding-top: 5%">
 
-                <div class="faq-item">
-                    <h3 class="text-left text-muted">Are there any requirements to attend?</h3>
-                    <p>
-                        Nope! Anyone can join this hackathon, however software development experience is recommended.
-                    </p>
-                </div>
-
-                <div class="faq-item">
-                    <h3 class="text-left text-muted">Is hack::peel running online, or in-person?</h3>
-                    <p>
-                        Due to COVID-19 restrictions and guidelines, this event is running exclusively online.
-                    </p>
-                </div>
-            </div>
+            {% for col in site.data.faq %}
 
             <div class="col-sm-4">
-                <div class="faq-item " >
-                    <h3 class="text-left text-muted">When is the hackathon?</h3>
-                    <p>
-                        The hackathon is planned to run from Apr 29 - May 01. Check the <a href="/#timetable" target="_blank">timetable</a> for more information.
-                    </p>
-                </div>
+
+                {% for faq in col.data %}
 
                 <div class="faq-item">
-                    <h3 class="text-left text-muted">Who can attend?</h3>
-                    <p>
-                        Any student enrolled in a Peel region high-school can attend this hackathon.
-                    </p>
+                    <h3 class="text-left text-muted">{{ faq.question }}</h3>
+                    <p>{{ faq.answer | markdownify }}</p>
                 </div>
 
-                <div class="faq-item">
-                    <h3 class="text-left text-muted">Are there any prizes for winners?</h3>
-                    <p>
-                        With the help of our sponsors, we will be providing monetary as well as software and API prizes to the chosen winners.
-                    </p>
-                </div>
+                {% endfor %}
+
             </div>
 
-            <div class="col-sm-4">
-                <div class="faq-item">
-                    <h3 class="text-left text-muted">Who owns my project?</h3>
-                    <p>
-                        You and your team own anything you create. Why not make it open source, on <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>?
-                    </p>
-                </div>
+            {% endfor %}
 
-                <div class="faq-item">
-                    <h3 class="text-left text-muted" >Can I start work before the hackathon begins?</h3>
-                    <p>
-                        While you can explore ideas, you are not allowed to write code or begin working on the project before the hacking period of the hackathon starts.
-                    </p>
-                </div>
-
-                <div class="faq-item">
-                    <h3 class="text-left text-muted">Is there a theme for the hackathon?</h3>
-                    <p>
-                        To allow for as much creative liberty, there is no required project theme.
-                    </p>
-                </div>
-            </div>
         </div>
     </div>
 </section>
