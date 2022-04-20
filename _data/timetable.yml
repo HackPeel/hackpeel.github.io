@@ -4,27 +4,28 @@
       time: 18:00
     - name: Hacking begins
       time: 19:00
-    - name: Workshops begin
-      time: 20:00
+    - name: Git/GitHub workshop
+      time: 21:00
     - name: End of day 1
       time: 23:59
 - day_text: Saturday — Apr. 30
   events:
-    - name: Opening ceremony
+    - name: Echo3D workshop
+      time: 14:00
+    - name: CGI workshop
       time: 18:00
-    - name: Hacking begins
-      time: 19:00
-    - name: Workshops begin
-      time: 20:00
     - name: End of day 1
       time: 23:59
 - day_text: Sunday — May 01
   events:
-    - name: Opening ceremony
-      time: 18:00
-    - name: Hacking begins
-      time: 19:00
-    - name: Workshops begin
-      time: 20:00
-    - name: End of day 1
-      time: 23:59
+    - name: Competitive programming workshop
+      time: 10:00
+    - name: Hacking ends
+      time: 13:00
+    - name: Project presentations start
+      time: 14:00
+    - name: Presentations and judging continue
+      time: 15:00
+    - name: Closing ceremony and prizes handed out
+      time: 16:00
+      
