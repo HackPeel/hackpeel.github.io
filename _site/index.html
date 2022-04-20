@@ -51,6 +51,10 @@
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script>AOS.init();</script>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -58,13 +62,13 @@
 </head>
 
 
-    <body id="top">
+    <body id="top" style="overflow-x:hidden;">
 
         <header>
     <nav class="navbar navbar-expand-lg bg-light fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#top">
-                <img style="" src="/assets/images/navbar-logo.svg" class="d-inline-block align-top" alt="hack::peel" />
+                <img src="/assets/images/navbar-logo.png" class="d-inline-block align-top" alt="hack::peel" style="height: 30px !important;" />
             </a>
 
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -104,16 +108,43 @@
 
         <main>
             <section class="full-height" id="top">
-    <div class="center jumbotron jumbotron-fluid background-image full-height" style="background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url( /assets/images/photos/home_banner.jpg);">
+    <div class="center jumbotron jumbotron-fluid background-image full-height"
+        style="background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url( /assets/images/photos/home_banner.jpg);">
         <div class="full-height relative-center">
             <h1 style="max-width: 100%; font-size: 16vmin" class="flex-justify-center display-1 text-light">hack::peel</h1>
             <h2 class="text-light">A Peel-wide hackathon for students to compete, collaborate and learn</h2>
             <div id="socials" class="row justify-content-center">
                 
             </div>
-            <div style="flex-direction: row; display: flex; align-items: center; justify-content: space-evenly; max-width: 450px; margin: 0 auto; padding: 20px 0; padding-top: 35px">
-                <a style="" class="btn btn-primary btn-lg text-light" href="https://hackpeel.devpost.com/" target="_blank" rel="noopener noreferrer">Register on Devpost</a>
-                <a style="" class="btn btn-discord btn-lg text-light" href="https://discord.com/invite/h3GHTd7ygW" target="_blank" rel="noopener noreferrer">Discord server</a>
+            <div
+                style="flex-direction: row; display: flex; align-items: center; justify-content: space-evenly; max-width: 300px; margin: 0 auto; padding: 20px 0; padding-top: 35px">
+                <button type="button" data-toggle="modal" data-target="#exampleModal" style=""
+                    class="btn btn-primary btn-lg text-light">Register</button>
+                <a style="" class="btn btn-discord btn-lg text-light" href="https://discord.com/invite/h3GHTd7ygW"
+                    target="_blank" rel="noopener noreferrer">Discord server</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Register for hack::peel</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="font-size: 25px;">
+                    <ol>
+                        <li><b>Join the official Devpost</b></li>
+                        <a class="btn btn-primary btn-lg text-light mb-4" href="https://hackpeel.devpost.com">Devpost</a>
+                        <li><b>Fill out the Google Form</b></li>
+                        <a class="btn btn-primary btn-lg text-light mb-4" href="https://tinyurl.com/register-hackpeel">Google Form</a>
+                        <p>Note: these steps are <b>mandatory</b> to be able to participate in the hackathon!</p>
+                    </ol>
+                </div>
             </div>
         </div>
     </div>
