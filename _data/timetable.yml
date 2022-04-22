@@ -1,28 +1,32 @@
 - day_text: Friday — Apr. 29
   events:
     - name: Opening ceremony
-      time: 1800
+      time: "6:00 PM"
     - name: Hacking begins
-      time: 1900
+      time: "7:00 PM"
+    - name: Opportunities in computer science workshop
+      time: "8:00 PM"
     - name: Git/Github workshop
-      time: 2100
+      time: "9:00 PM"
     - name: Among us
-      time: 2200
+      time: "10:00 PM"
     - name: End of day 1
-      time: 2359
+      time: "11:59 PM"
 - day_text: Saturday — Apr. 30
   events:
     - name: Echo3D workshop
-      time: 1400
+      time: "2:00 PM"
     - name: CGI workshop
-      time: 1800
+      time: "6:00 PM"
+    - name: Competitive programming workshop
+      time: "9:00 PM"
     - name: End of day 2
-      time: 2359
+      time: "11:59 PM"
 - day_text: Sunday — May 01
   events:
     - name: Hacking ends
-      time: 1300
+      time: "3:00 PM"
     - name: Presentations start
-      time: 1400
+      time: "3:00 PM"
     - name: Closing ceremony
-      time: 1600
+      time: "6:00 PM"
