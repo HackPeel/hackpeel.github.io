@@ -1,4 +1,7 @@
 -
+    - name: CGI
+      link: https://www.cgi.com/
+      image: CGI.png
     - name: DigitalOcean
       link: https://www.digitalocean.com/
       image: DigitalOcean.png
