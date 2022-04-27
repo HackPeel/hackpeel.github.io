@@ -14,8 +14,6 @@
   events:
     - name: Echo3D workshop
       time: "2:00 PM"
-    - name: CGI Careers in Tech workshop
-      time: "4:00 PM"
     - name: Competitive programming workshop
       time: "9:00 PM"
     - name: Among us
